@@ -19,7 +19,6 @@ jobs:
         with:
           submodules: true
           lfs: false
-          node-version: '20'
       - uses: actions/setup-node@v3
         with:
           node-version: 20
@@ -52,6 +51,7 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_POLITE_SMOKE_08EC62110 }}
           action: "close"
+
 
 
 
