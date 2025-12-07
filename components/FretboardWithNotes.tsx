@@ -14,7 +14,7 @@ export default function FretboardWithNotes({scaleRoot, scaleType, frets = 12}: P
 {
   const { width } = useWindowDimensions();
   const boardWidth = width - 20;
-  const boardHeight = 260;
+  const boardHeight = 200;
   const nutWidth = 6;
   const fretSpacing = (boardWidth - nutWidth) / frets;
   const strings = 6;
@@ -34,7 +34,7 @@ export default function FretboardWithNotes({scaleRoot, scaleType, frets = 12}: P
 
 
   return (    
-    <View style={{ alignItems: "center", padding: 10 }}>      
+    <View style={{ alignItems: "center", padding: 1 }}>      
       <Svg width={boardWidth} height={boardHeight}>
 
         {/* Fond */}

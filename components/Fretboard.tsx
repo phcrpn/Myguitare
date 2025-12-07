@@ -12,14 +12,14 @@ type Props = {
 export default function Fretboard({
   strings = 6,
   frets = 12,
-  widthPadding = 16,
+  widthPadding = 10,
 }: Props) {
   const { width } = useWindowDimensions();
 
   // dimensions calculées
   const boardWidth = Math.max(300, width - widthPadding * 2);
   const boardHeight = 220; // fixe pour confort ; on peut adapter
-  const nutWidth = 6;
+  const nutWidth = 4;
   const fretSpacing = (boardWidth - nutWidth) / frets;
   const stringSpacing = boardHeight / (strings + 1);
 
@@ -27,7 +27,7 @@ export default function Fretboard({
   const markerFrets = new Set([3, 5, 7, 9, 12]);
 
   return (
-    <View style={{ alignItems: "center", padding: 12 }}>
+    <View style={{ alignItems: "center", padding: 1 }}>
       <Svg width={boardWidth} height={boardHeight}>
         {/* fond du manche */}
         <Rect
@@ -35,7 +35,7 @@ export default function Fretboard({
           y={0}
           width={boardWidth}
           height={boardHeight}
-          rx={10}
+          rx={0}
           fill="#5c4033"
         />
 

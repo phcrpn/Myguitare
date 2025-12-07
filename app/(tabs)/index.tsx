@@ -14,14 +14,14 @@ export default function Index() {
         style={{
         flexDirection: "row",
         paddingHorizontal: 10,
-        marginVertical: 10
+        marginVertical: 0
         }}
       >  
         {/* Sélecteur tonique */}
         <Picker
           selectedValue={tonic}
           onValueChange={(itemValue) => setTonic(itemValue)}
-          style={{ marginVertical: 10 }}
+          style={{ marginVertical: 0 }}
         >
         {NOTES.map(note => (<Picker.Item key={note} label={note} value={note} />))}
         </Picker>
@@ -30,7 +30,7 @@ export default function Index() {
         <Picker
           selectedValue={scaleType}
           onValueChange={(itemValue) => setScaleType(itemValue)}
-          style={{ marginVertical: 10 }}
+          style={{ marginVertical: 0 }}
         >
         {Object.keys(SCALES).map((scale) => (<Picker.Item key={scale} label={scale} value={scale}/>))}
         </Picker>
